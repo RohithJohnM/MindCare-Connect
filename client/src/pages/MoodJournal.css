@@ -1,0 +1,505 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+.mj-page {
+    min-height: 100vh;
+    background: #f8faf6;
+    color: #243b30;
+    font-family: 'DM Sans', sans-serif;
+    padding: 32px 7%;
+}
+
+.mj-header {
+    margin-bottom: 26px;
+}
+
+.mj-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #54765c;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.mj-back:hover {
+    color: #244a36;
+}
+
+.mj-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mj-heading-icon {
+    width: 53px;
+    height: 53px;
+    border-radius: 15px;
+    background: #e5efe3;
+    color: #315d45;
+    display: grid;
+    place-items: center;
+}
+
+.mj-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin: 0 0 5px;
+    color: #244a36;
+}
+
+.mj-heading p {
+    color: #819085;
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* WELCOME BANNER */
+
+.mj-welcome {
+    background: linear-gradient(115deg, #e5efe3, #f0f5ec);
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 25px;
+}
+
+.mj-welcome h2 {
+    color: #315d45;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin: 0 0 8px;
+}
+
+.mj-welcome p {
+    color: #718478;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 680px;
+}
+
+
+/* FORM CARD */
+
+.mj-form-card {
+    background: #ffffff;
+    border: 1px solid #e4ebe3;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 5px 20px rgba(40, 70, 45, 0.025);
+}
+
+.mj-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    color: #547b5c;
+}
+
+.mj-section-title > svg {
+    background: #edf4eb;
+    border-radius: 12px;
+    padding: 7px;
+    box-sizing: content-box;
+}
+
+.mj-section-title > div > span,
+.mj-history-heading > div > span {
+    display: block;
+    color: #84988a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.mj-section-title h2,
+.mj-history-heading h2 {
+    color: #244a36;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin: 0;
+}
+
+.mj-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #405a49;
+    margin: 23px 0 13px;
+}
+
+
+/* MOOD OPTIONS */
+
+.mj-mood-options {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.mj-mood-option {
+    background: #fafbf9;
+    border: 1px solid #e7eee6;
+    border-radius: 12px;
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #526d59;
+}
+
+.mj-mood-option span {
+    font-size: 27px;
+}
+
+.mj-mood-option small {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.mj-mood-option:hover {
+    border-color: #8eae91;
+    background: #f0f6ed;
+    transform: translateY(-2px);
+}
+
+.mj-mood-option.selected {
+    background: #e7f1e5;
+    border: 2px solid #527b59;
+    color: #315d45;
+}
+
+
+/* INTENSITY SLIDER */
+
+.mj-intensity {
+    background: #f8faf7;
+    border-radius: 11px;
+    padding: 15px 18px;
+}
+
+.mj-intensity-value {
+    color: #315d45;
+    text-align: right;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.mj-intensity input {
+    width: 100%;
+    accent-color: #527b59;
+    cursor: pointer;
+}
+
+.mj-range-labels {
+    display: flex;
+    justify-content: space-between;
+    color: #91a094;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+
+/* PERSONAL REFLECTION */
+
+.mj-form-card textarea {
+    display: block;
+    width: 100%;
+    resize: vertical;
+    min-height: 105px;
+    border: 1px solid #e2eae1;
+    background: #fcfdfb;
+    border-radius: 10px;
+    padding: 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: #344d3c;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.mj-form-card textarea:focus {
+    border-color: #729779;
+}
+
+.mj-form-card textarea::placeholder {
+    color: #a4b0a6;
+}
+
+.mj-character-count {
+    color: #a0aaa2;
+    text-align: right;
+    font-size: 10px;
+    margin-top: 7px;
+}
+
+
+/* ALERTS */
+
+.mj-message {
+    padding: 12px 14px;
+    border-radius: 9px;
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+.mj-message.error {
+    color: #a33e3e;
+    background: #fff0f0;
+    border: 1px solid #f4d7d7;
+}
+
+.mj-message.success {
+    color: #356943;
+    background: #edf7ec;
+    border: 1px solid #d9ead7;
+}
+
+
+/* SAVE BUTTON */
+
+.mj-save-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 9px;
+    background: #315d45;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.mj-save-button:hover {
+    background: #244a36;
+    transform: translateY(-1px);
+}
+
+.mj-save-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+
+/* HISTORY SECTION */
+
+.mj-history {
+    background: #ffffff;
+    border: 1px solid #e4ebe3;
+    border-radius: 16px;
+    padding: 27px;
+}
+
+.mj-history-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.mj-entry-count {
+    background: #eaf2e8;
+    color: #52765a;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 8px 13px;
+    border-radius: 20px;
+}
+
+
+/* EMPTY STATE */
+
+.mj-empty {
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #75917a;
+    gap: 7px;
+}
+
+.mj-empty h3 {
+    font-family: 'Playfair Display', serif;
+    color: #315d45;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.mj-empty p {
+    color: #8b998f;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/* MOOD ENTRIES */
+
+.mj-entry-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mj-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #fafbf9;
+    border: 1px solid #e9efe8;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.mj-entry-emoji {
+    width: 45px;
+    height: 45px;
+    background: #eaf2e8;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+.mj-entry-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.mj-entry-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.mj-entry-top h3 {
+    font-size: 14px;
+    color: #315d45;
+    margin: 0;
+}
+
+.mj-entry-top span {
+    color: #929f95;
+    font-size: 10px;
+}
+
+.mj-entry-content > p {
+    color: #7c8c80;
+    font-size: 11px;
+    margin: 7px 0;
+}
+
+.mj-entry-note {
+    background: #f1f5ef;
+    color: #607565;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 9px;
+    overflow-wrap: anywhere;
+}
+
+.mj-delete {
+    border: none;
+    background: transparent;
+    color: #a4aaa3;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 7px;
+    transition: 0.2s;
+}
+
+.mj-delete:hover {
+    background: #fff0ef;
+    color: #bd5550;
+}
+
+
+/* FOOTER */
+
+.mj-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #94a095;
+    font-size: 11px;
+    padding: 25px 0 5px;
+}
+
+.mj-footer svg {
+    color: #67866d;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .mj-mood-options {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mj-page {
+        padding: 25px 4%;
+    }
+}
+
+@media (max-width: 520px) {
+    .mj-page {
+        padding: 20px 13px;
+    }
+
+    .mj-heading h1 {
+        font-size: 23px;
+    }
+
+    .mj-form-card,
+    .mj-history {
+        padding: 19px;
+    }
+
+    .mj-section-title h2,
+    .mj-history-heading h2 {
+        font-size: 19px;
+    }
+
+    .mj-mood-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mj-entry {
+        gap: 9px;
+        padding: 12px;
+    }
+
+    .mj-entry-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .mj-entry-top span {
+        font-size: 9px;
+    }
+}

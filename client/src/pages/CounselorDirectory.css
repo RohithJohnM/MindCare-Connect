@@ -1,0 +1,448 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+.cd-page {
+    min-height: 100vh;
+    padding: 32px 6%;
+    background: #f8faf6;
+    color: #243b30;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* HEADER */
+
+.cd-header {
+    margin-bottom: 28px;
+}
+
+.cd-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #54765c;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 28px;
+}
+
+.cd-back:hover {
+    color: #244a36;
+}
+
+.cd-title-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cd-title-icon {
+    width: 55px;
+    height: 55px;
+    background: #e5efe3;
+    color: #315d45;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+}
+
+.cd-title-row h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #244a36;
+    margin: 0 0 6px;
+}
+
+.cd-title-row p {
+    font-size: 13px;
+    color: #819085;
+    margin: 0;
+}
+
+/* WELCOME BANNER */
+
+.cd-welcome {
+    background: linear-gradient(115deg, #e5efe3, #f0f5ec);
+    border-radius: 16px;
+    padding: 27px 30px;
+    margin-bottom: 27px;
+}
+
+.cd-welcome h2 {
+    color: #315d45;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin: 0 0 9px;
+}
+
+.cd-welcome p {
+    max-width: 720px;
+    color: #718478;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* SEARCH */
+
+.cd-search-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.cd-search-box {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex: 1;
+    max-width: 650px;
+    background: white;
+    border: 1px solid #e3ebe1;
+    border-radius: 11px;
+    padding: 0 15px;
+    color: #78917d;
+}
+
+.cd-search-box:focus-within {
+    border-color: #729779;
+}
+
+.cd-search-box input {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #344d3c;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+}
+
+.cd-search-box input::placeholder {
+    color: #a4b0a6;
+}
+
+.cd-count {
+    color: #718478;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* LOADING AND EMPTY STATES */
+
+.cd-state {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    color: #78917e;
+    background: white;
+    border: 1px solid #e4ebe3;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.cd-state h3 {
+    font-family: 'Playfair Display', serif;
+    color: #315d45;
+    font-size: 20px;
+    margin: 0;
+}
+
+.cd-state p {
+    color: #849389;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.cd-spinner {
+    animation: cd-spin 1s linear infinite;
+}
+
+@keyframes cd-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cd-error {
+    color: #a34d4d;
+}
+
+.cd-retry {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #315d45;
+    color: white;
+    cursor: pointer;
+}
+
+/* COUNSELOR GRID */
+
+.cd-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.cd-card {
+    min-width: 0;
+    background: white;
+    border: 1px solid #e4ebe3;
+    border-radius: 16px;
+    padding: 23px;
+    box-shadow: 0 5px 20px rgba(40, 70, 45, 0.025);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cd-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 25px rgba(40, 70, 45, 0.07);
+}
+
+/* CARD HEADER */
+
+.cd-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.cd-avatar {
+    width: 57px;
+    height: 57px;
+    flex-shrink: 0;
+    background: #eaf2e8;
+    color: #527b59;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.cd-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cd-name-area {
+    min-width: 0;
+}
+
+.cd-name-area h3 {
+    font-family: 'Playfair Display', serif;
+    color: #244a36;
+    font-size: 20px;
+    margin: 0 0 7px;
+    overflow-wrap: anywhere;
+}
+
+.cd-approved {
+    display: inline-block;
+    padding: 5px 9px;
+    background: #edf6eb;
+    color: #497650;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* DEMO PROFILE WARNING */
+
+.cd-demo-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    background: #fff7e8;
+    border: 1px solid #f0dfba;
+    border-radius: 8px;
+    color: #8b6227;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.cd-demo-warning svg {
+    flex-shrink: 0;
+}
+
+/* SPECIALIZATIONS */
+
+.cd-specializations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 19px;
+}
+
+.cd-specializations span {
+    padding: 7px 10px;
+    background: #edf4eb;
+    border-radius: 20px;
+    color: #52765a;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* COUNSELOR DETAILS */
+
+.cd-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid #edf1eb;
+    border-bottom: 1px solid #edf1eb;
+}
+
+.cd-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #718478;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.cd-detail svg {
+    color: #6b8a70;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.cd-detail span {
+    overflow-wrap: anywhere;
+}
+
+/* BIO */
+
+.cd-bio {
+    color: #7b8c80;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 17px 0;
+    overflow-wrap: anywhere;
+}
+
+/* CARD FOOTER */
+
+.cd-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.cd-fee {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #315d45;
+}
+
+.cd-fee strong {
+    font-size: 19px;
+}
+
+.cd-fee span {
+    color: #91a095;
+    font-size: 10px;
+}
+
+.cd-duration {
+    background: #f2f5ef;
+    color: #6d8371;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+/* BOOKING BUTTON */
+
+.cd-book-button {
+    width: 100%;
+    padding: 12px;
+    background: #e9efe7;
+    color: #607565;
+    border: 1px solid #dce7da;
+    border-radius: 9px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* FOOTER */
+
+.cd-footer {
+    padding: 30px 0 8px;
+    text-align: center;
+    color: #94a095;
+    font-size: 11px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .cd-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cd-page {
+        padding: 25px 4%;
+    }
+}
+
+@media (max-width: 550px) {
+    .cd-page {
+        padding: 20px 13px;
+    }
+
+    .cd-title-row h1 {
+        font-size: 24px;
+    }
+
+    .cd-welcome {
+        padding: 22px;
+    }
+
+    .cd-welcome h2 {
+        font-size: 20px;
+    }
+
+    .cd-search-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cd-search-box {
+        max-width: none;
+    }
+
+    .cd-count {
+        text-align: right;
+    }
+
+    .cd-card {
+        padding: 18px;
+    }
+
+    .cd-name-area h3 {
+        font-size: 18px;
+    }
+}
